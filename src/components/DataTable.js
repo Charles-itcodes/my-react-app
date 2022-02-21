@@ -4,7 +4,9 @@ const DataTable = () => {
 
 const initialData =[{id:1,firstName:"Maria",lastName:"Svensson",age:54,birthDate:"1967-11-07",country:"Sweden",city:"Karlskrona"},
 {id:2,firstName:"Charles",lastName:"Rudahusha",age:34,birthDate:"1989-01-25",country:"Sweden",city:"Värnamo"},
-{id:3,firstName:"Jaime",lastName:"Torrealba",age:57,birthDate:"1965-01-08",country:"Sweden",city:"Jönköping"}];
+{id:3,firstName:"Jaime",lastName:"Torrealba",age:57,birthDate:"1965-01-08",country:"Sweden",city:"Jönköping"},
+{id:4,firstName:"Abbe",lastName:"Mohamud",age:77,birthDate:"1940-01-08",country:"Sweden",city:"Stockholm"},
+{id:5,firstName:"Laurita",lastName:"Owanta",age:31,birthDate:"1990-09-14",country:"Sweden",city:"Växjö"}];
 
 const  [studentList, setStudentList]= useState(initialData);
 const [showDetails, setShowDetails]=useState(false);
@@ -59,20 +61,25 @@ const ShowStudentDetails =()=>{
 
     if (showDetails){
         return(
-            <div className='card'>
-                <div className='card-header bg-info text-white'>
+             <div className='container'>
+             <div className='col-9'>
+             <div className='card'>
+         <div className='card-header bg-info text-white'>
                     STUDENT INFORMATION
-                </div>
+         </div>
     <div className='card-body'>
-        <h4 className='card-title'>Country and City</h4>
+        <h6 className='card-title'>Country and City: {student.country}  {student.city}</h6>
         <p className='text'>ID: {student.id}</p>
         <p className='text'>FullName: {student.firstName}  {student.lastName}</p>
         <p className='text'>BirthDate: {student.birthDate}</p>
     </div>
+    
     <div className='card-footer'>
-        <button type='button' className='btn btn-danger' onClick={()=>setShowDetails(false)}>Close</button>
-    </div>
-    </div>
+        <button type='button' className='btn btn-outline-info' onClick={()=>setShowDetails(false)}>Close</button>
+         </div>
+         </div>
+         </div>
+         </div>
         );
         }else{
            return ("");
