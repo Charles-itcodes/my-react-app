@@ -8,6 +8,7 @@ const initialData =[{id:1,firstName:"Maria",lastName:"Svensson",age:54,birthDate
 {id:4,firstName:"Abbe",lastName:"Mohamud",age:77,birthDate:"1940-01-08",country:"Sweden",city:"Stockholm"},
 {id:5,firstName:"Laurita",lastName:"Owanta",age:31,birthDate:"1990-09-14",country:"Sweden",city:"Växjö"}];
 
+// initial variable created
 const  [studentList, setStudentList]= useState(initialData);
 const [showDetails, setShowDetails]=useState(false);
 const [student, setStudent]= useState({id:0,firstName:"",lastName:"",age:0,birthDate:"",country:"",city:""});
